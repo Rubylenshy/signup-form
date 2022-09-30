@@ -12,9 +12,9 @@ const show_password = document.querySelector('#show-pw')
 
 //Email Validation
 
+var emailRegex = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9]+)(\.[a-z]+)(.[a-z]+)?$/
 email.onkeyup = ()=>{
 
-    var emailRegex = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9]+)(\.[a-z]+)(.[a-z]+)?$/
     if (email.value.match(emailRegex)) {
         console.log('valid')
         error[2].style.display = 'none';
@@ -30,8 +30,8 @@ email.onkeyup = ()=>{
         for (let i = 0; i < error.length; i++) {
             error[2].style.display = 'block';
             email.classList.add('error');
+            email.classList.remove('valid');
         }
-        console.log('invalid')
     }
 }
 email.onblur = ()=>{
@@ -39,6 +39,10 @@ email.onblur = ()=>{
         error[2].style.display = 'none';
         email.classList.remove('error');
         email.classList.add('valid');
+    }else{
+        error[2].style.display = 'block';
+        email.classList.add('error');
+        email.classList.remove('valid');
     }
 }
 
@@ -72,12 +76,13 @@ firstName.onblur = ()=>{
 lastName.onkeyup = ()=>{
     if (lastName.value == '' ) {
         for (let i = 0; i < error.length; i++) {
-            error[0].style.display = 'block';
+            error[1].style.display = 'block';
             lastName.classList.add('error');
+            lastName.classList.remove('valid');
         }
     }
     else{
-        error[0].style.display = 'none';
+        error[1].style.display = 'none';
         lastName.classList.remove('error');
     }
 }

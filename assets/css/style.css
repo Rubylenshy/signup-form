@@ -122,8 +122,10 @@ input[type=checkbox]{
     margin-bottom: 15px;
     transition: all .3s;
 }
-.btn:focus,
 .btn:hover{
+    opacity: .8;
+}
+.btn:focus{
     animation: click .5s;
     opacity: .8;
 }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Frontend Mentor | Sign up form</title>
+
+</head>
+<body>
+
+  <main>
+    <div class="container">
+      <div class="primary-text">
+        <h1>Learn to code by watching others</h1>
+        <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+          but understanding how developers think is invaluable. </p>
+      </div>
+
+      <div class="form">
+        <div class="promo-offer form-presets"> <span>Try it free 7 days</span> then $20/mo. thereafter</div>
+        <form action="#" class="form form-presets">
+          <div class="input">
+            <input type="text" placeholder="First Name" class="firstName" required>
+            <em class="fn-error">First name cannot be empty</em>
+          </div>
+          <div class="input">
+            <input type="text" placeholder="Last Name" class="lastName" required>
+            <em class="ln-error">First name cannot be empty</em>
+          </div>
+          <div class="input">
+            <input type="email" placeholder="example@company.com" class="email">
+            <em class="email-error">Looks like an invalid email!</em>
+          </div>
+          <div class="input">
+            <input type="password" placeholder="Password" minlength="6" class="password">
+            <em class="pw-error">Password cannot be empty</em>
+            <small>** At least 6 characters</small>
+          </div>
+          <div class="password-shown">
+            <input type="checkbox" title="Show Password" onclick="show()"> 
+            Show Password
+          </div>
+          
+          <button type="submit" class="btn">CLAIM YOUR FREE TRIAL</button>
+          
+          <footer>
+            By clicking the button, you are agreeing to our <span>Terms and Services</span>
+          </footer>
+        </form>
+      </div>
+    </div>
+
+  </main>
+  
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
